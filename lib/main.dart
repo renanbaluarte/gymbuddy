@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
-import 'treino_screen.dart';
 import 'cronometro_screen.dart';
-import 'chat_screen.dart';
+import 'execucao_screen.dart';
+// Import outras telas conforme forem criadas
+// import 'chat_screen.dart';
+// import 'treino_screen.dart';
 
 void main() {
   runApp(const GymBuddyApp());
@@ -15,16 +17,19 @@ class GymBuddyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'GymBuddy',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      initialRoute: '/',
+      home: const HomeScreen(),
+
+      // Rotas nomeadas do app
       routes: {
-        '/': (context) => const HomeScreen(),
-        //'/treino': (context) => const TreinoScreen(),
-        //'/cronometro': (context) => const CronometroScreen(),
-        //'/chat': (context) => const ChatScreen(),
+        '/cronometro': (context) => const CronometroScreen(),
+        // '/chat': (context) => const ChatScreen(),
+        // '/treino': (context) => const TreinoScreen(),
+        // Adicione mais rotas conforme necessário
       },
     );
   }

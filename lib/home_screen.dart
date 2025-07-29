@@ -26,13 +26,13 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
 
-      // Conteúdo principal da tela
+      // Conteúdo principal da tela com padding e espaçamento entre os cards
       body: Container(
         color: Colors.grey[200],
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
         child: Column(
           children: [
-            // Card do Treino
+            // Primeiro card: treino
             _buildImageCard(
               context,
               'assets/images/treino.jpg',
@@ -41,8 +41,8 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/treino');
               },
             ),
-            const SizedBox(height: 16),
-            // Card do Cronômetro
+            const SizedBox(height: 24),
+            // Segundo card: cronômetro
             _buildImageCard(
               context,
               'assets/images/esteira.jpg',
@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
 
-      // Botão flutuante central para abrir o chat com IA
+      // Botão flutuante inferior central
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, '/chat');
@@ -67,7 +67,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  /// Constrói um card visual com imagem, botão redondo e ação personalizada
+  /// Método que constrói os cards com imagem e botão
   Widget _buildImageCard(
       BuildContext context,
       String imagePath,
@@ -77,29 +77,29 @@ class HomeScreen extends StatelessWidget {
     return Center(
       child: Stack(
         children: [
-          // Imagem com cantos arredondados e largura reduzida
+          // Imagem com largura controlada e altura reduzida
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
             child: Image.asset(
               imagePath,
-              height: 180,
               width: MediaQuery.of(context).size.width * 0.85,
+              height: 250, // <- Tamanho reduzido
               fit: BoxFit.cover,
             ),
           ),
-          // Botão verde redondo no canto inferior direito
+          // Botão circular no canto inferior direito
           Positioned(
             bottom: 8,
             right: 8,
             child: Container(
-              width: 40,
-              height: 40,
+              width: 50,
+              height: 50,
               decoration: const BoxDecoration(
                 color: Colors.green,
                 shape: BoxShape.circle,
               ),
               child: IconButton(
-                icon: Icon(icon, color: Colors.black, size: 20),
+                icon: Icon(icon, color: Colors.black, size: 30),
                 onPressed: onPressed,
                 splashRadius: 24,
               ),
