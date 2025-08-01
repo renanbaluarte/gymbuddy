@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "752750399196",
+    "project_id": "gymbuddy-fc651",
+    "storage_bucket": "gymbuddy-fc651.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752750399196:android:eba0e125083a9fa23cee19",
+        "android_client_info": {
+          "package_name": "com.renan.ferreira.gymbuddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7cwQcbRStDeS1VDU2nMgVXFx_N2sj5qs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
