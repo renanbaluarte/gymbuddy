@@ -3,7 +3,7 @@ import 'home_screen.dart';
 import 'cronometro_screen.dart';
 import 'execucao_screen.dart';
 // Import outras telas conforme forem criadas
-// import 'chat_screen.dart';
+import 'chat_screen.dart';
 // import 'treino_screen.dart';
 
 void main() {
@@ -27,7 +27,7 @@ class GymBuddyApp extends StatelessWidget {
       // Rotas nomeadas do app
       routes: {
         '/cronometro': (context) => const CronometroScreen(),
-        // '/chat': (context) => const ChatScreen(),
+        '/chat': (context) => const ChatScreen(),
         // '/treino': (context) => const TreinoScreen(),
         // Adicione mais rotas conforme necessário
       },

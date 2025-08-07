@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   audioplayers: ^5.2.0
+  flutter_spinkit: ^5.2.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -67,6 +68,8 @@ flutter:
     - assets/images/esteira.jpg
     - assets/sounds/beep.mp3
     - assets/sounds/done.mp3
+    - assets/data/chat_data.json
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
