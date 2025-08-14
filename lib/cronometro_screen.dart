@@ -111,7 +111,7 @@ class _CronometroScreenState extends State<CronometroScreen> {
                 padding:
                 const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 textStyle:
-                const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               onPressed: () {
                 Navigator.push(

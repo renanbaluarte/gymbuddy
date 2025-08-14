@@ -104,7 +104,7 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: AppBar(
         title: const Text("GymBuddy 🏋️"),
         centerTitle: true,
-        backgroundColor: Colors.lightGreenAccent[100],
+        backgroundColor: Colors.white,
       ),
       body: Column(
         children: [

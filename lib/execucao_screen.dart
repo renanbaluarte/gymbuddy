@@ -84,7 +84,7 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
       context: context,
       builder: (_) => AlertDialog(
         title: const Text('Treino Concluído!'),
-        content: const Text('Parabéns por completar todos os ciclos.'),
+        //content: const Text('Parabéns por completar todos os ciclos.'),
         actions: [
           TextButton(
             onPressed: () {
