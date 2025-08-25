@@ -68,7 +68,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Future<void> _simulateTyping(String fullText) async {
     String currentText = "";
     for (int i = 0; i < fullText.length; i++) {
-      await Future.delayed(const Duration(milliseconds: 1)); // Velocidade da digitação
+      await Future.delayed(const Duration(milliseconds: 10)); // Velocidade da digitação
       currentText += fullText[i];
       setState(() {
         messages[messages.length - 1] = {'type': 'bot', 'text': currentText};

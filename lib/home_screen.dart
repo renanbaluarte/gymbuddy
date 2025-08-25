@@ -26,13 +26,12 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
 
-      // Conteúdo principal da tela com padding e espaçamento entre os cards
+      // Conteúdo principal
       body: Container(
         color: Colors.grey[200],
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
         child: Column(
           children: [
-            // Primeiro card: treino
             _buildImageCard(
               context,
               'assets/images/treino.jpg',
@@ -42,7 +41,6 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             const SizedBox(height: 24),
-            // Segundo card: cronômetro
             _buildImageCard(
               context,
               'assets/images/esteira.jpg',
@@ -55,13 +53,30 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
 
-      // Botão flutuante inferior central
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/chat');
-        },
-        backgroundColor: Colors.green,
-        child: const Icon(Icons.chat),
+      // Dois botões flutuantes lado a lado
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // Botão de Chat
+          FloatingActionButton(
+            heroTag: "chatBtn", // <- evita conflito de Hero
+            onPressed: () {
+              Navigator.pushNamed(context, '/chat');
+            },
+            backgroundColor: Colors.green,
+            child: const Icon(Icons.chat),
+          ),
+          const SizedBox(width: 16),
+          // Botão de QR Code
+          FloatingActionButton(
+            heroTag: "qrBtn",
+            onPressed: () {
+              Navigator.pushNamed(context, '/qrscanner');
+            },
+            backgroundColor: Colors.green,
+            child: const Icon(Icons.qr_code_scanner),
+          ),
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
@@ -77,17 +92,15 @@ class HomeScreen extends StatelessWidget {
     return Center(
       child: Stack(
         children: [
-          // Imagem com largura controlada e altura reduzida
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
             child: Image.asset(
               imagePath,
               width: MediaQuery.of(context).size.width * 0.85,
-              height: 250, // <- Tamanho reduzido
+              height: 250,
               fit: BoxFit.cover,
             ),
           ),
-          // Botão circular no canto inferior direito
           Positioned(
             bottom: 8,
             right: 8,

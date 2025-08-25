@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'home_screen.dart';
 import 'cronometro_screen.dart';
 import 'execucao_screen.dart';
+import 'qr_scanner_screen.dart';
+import 'equipment_detail_screen.dart';
 // Import outras telas conforme forem criadas
 import 'chat_screen.dart';
 // import 'treino_screen.dart';
@@ -28,6 +30,7 @@ class GymBuddyApp extends StatelessWidget {
       routes: {
         '/cronometro': (context) => const CronometroScreen(),
         '/chat': (context) => const ChatScreen(),
+        '/qrscanner': (context) => const QRScannerScreen(),
         // '/treino': (context) => const TreinoScreen(),
         // Adicione mais rotas conforme necessário
       },

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "EQUIP001",
+    "name": "Supino Reto com Barra",
+    "description": "Um exercício fundamental para o desenvolvimento do peitoral maior, com envolvimento secundário dos ombros e tríceps.",
+    "image": "https://i.imgur.com/exemplo1.jpg",
+    "gif": "https://i.imgur.com/exemplo_animado1.gif",
+    "instructions": "Deite-se no banco, posicione as mãos na barra com uma pegada um pouco mais larga que os ombros. Desça a barra controladamente até tocar o peito e empurre de volta à posição inicial.",
+    "exercises": [
+      "Peitoral",
+      "Tríceps",
+      "Ombro (Deltoide Anterior)"
+    ]
+  },
+  {
+    "id": "EQUIP002",
+    "name": "Leg Press 45°",
+    "description": "Máquina para fortalecimento dos membros inferiores, focando em quadríceps, glúteos e isquiotibiais.",
+    "image": "https://i.imgur.com/exemplo2.jpg",
+    "gif": "https://i.imgur.com/exemplo_animado2.gif",
+    "instructions": "Sente-se no aparelho e posicione os pés na plataforma. Destrave a segurança e flexione os joelhos, trazendo a plataforma em sua direção. Empurre de volta à posição inicial sem travar os joelhos.",
+    "exercises": [
+      "Quadríceps",
+      "Glúteo Máximo",
+      "Isquiotibiais"
+    ]
+  }
+]
