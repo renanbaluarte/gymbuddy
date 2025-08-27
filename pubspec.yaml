@@ -72,6 +72,15 @@ flutter:
     - assets/sounds/done.mp3
     - assets/data/chat_data.json
     - assets/data/equipments.json
+#    - assets/gifs/Mesa-Flexora.gif
+    - assets/gifs/mesa-flexora.gif
+    - assets/images/Mesa-Flexora.png
+    - assets/images/Peck-Deck.png
+    - assets/images/Cadeira-Abdutora.png
+    - assets/images/Cadeira-Extensora.png
+    - assets/images/Hack-Squat-Machine.png
+    - assets/images/Leg-press-45.png
+
 
 
 

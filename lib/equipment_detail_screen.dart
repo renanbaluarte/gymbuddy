@@ -11,7 +11,7 @@ class EquipmentDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(equipment.name),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.grey[200],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),

@@ -1,28 +1,99 @@
 [
   {
-    "id": "EQUIP001",
-    "name": "Supino Reto com Barra",
-    "description": "Um exercício fundamental para o desenvolvimento do peitoral maior, com envolvimento secundário dos ombros e tríceps.",
-    "image": "https://i.imgur.com/exemplo1.jpg",
-    "gif": "https://i.imgur.com/exemplo_animado1.gif",
-    "instructions": "Deite-se no banco, posicione as mãos na barra com uma pegada um pouco mais larga que os ombros. Desça a barra controladamente até tocar o peito e empurre de volta à posição inicial.",
-    "exercises": [
-      "Peitoral",
-      "Tríceps",
-      "Ombro (Deltoide Anterior)"
-    ]
-  },
-  {
-    "id": "EQUIP002",
+    "id": "831902",
     "name": "Leg Press 45°",
-    "description": "Máquina para fortalecimento dos membros inferiores, focando em quadríceps, glúteos e isquiotibiais.",
-    "image": "https://i.imgur.com/exemplo2.jpg",
-    "gif": "https://i.imgur.com/exemplo_animado2.gif",
-    "instructions": "Sente-se no aparelho e posicione os pés na plataforma. Destrave a segurança e flexione os joelhos, trazendo a plataforma em sua direção. Empurre de volta à posição inicial sem travar os joelhos.",
+    "description": "Máquina para fortalecimento dos membros inferiores, focando em quadríceps, glúteos e isquiotibiais com uma angulação de 45 graus que permite a utilização de altas cargas.",
+    "image": "assets/images/Leg-press-45.png",
+    "gif": "",
+    "instructions": "Sente-se no aparelho com as costas e o quadril bem apoiados. Posicione os pés na plataforma na largura dos ombros. Destrave a segurança e flexione os joelhos, descendo a plataforma de forma controlada. Empurre de volta à posição inicial sem travar os joelhos no final do movimento.",
     "exercises": [
       "Quadríceps",
       "Glúteo Máximo",
       "Isquiotibiais"
+    ]
+  },
+  {
+    "id": "603387",
+    "name": "Hack Machine",
+    "description": "Equipamento que simula o movimento de um agachamento, mas com o corpo apoiado em um encosto inclinado, o que proporciona maior segurança para a coluna e isolamento dos músculos das pernas.",
+    "image": "assets/images/Hack-Squat-Machine.png",
+    "gif": "",
+    "instructions": "Posicione-se no aparelho com as costas apoiadas no encosto e os ombros sob os apoios acolchoados. Coloque os pés na plataforma, um pouco à frente. Destrave o aparelho e agache, flexionando os joelhos até formar um ângulo de 90 graus. Empurre a plataforma de volta à posição inicial.",
+    "exercises": [
+      "Quadríceps",
+      "Glúteo Máximo"
+    ]
+  },
+  {
+    "id": "941725",
+    "name": "Voador (Peck Deck)",
+    "description": "Máquina de isolamento projetada para trabalhar o peitoral maior, promovendo a definição e o fortalecimento do músculo através de um movimento de adução horizontal dos ombros.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina com as costas totalmente apoiadas no encosto. Posicione os antebraços nos apoios acolchoados ou segure as manoplas. Force a aproximação dos braços um contra o outro, contraindo o peitoral no pico do movimento. Retorne à posição inicial de forma controlada.",
+    "exercises": [
+      "Peitoral Maior",
+      "Deltoide Anterior"
+    ]
+  },
+  {
+    "id": "455813",
+    "name": "Cadeira Abdutora",
+    "description": "Máquina que visa fortalecer os músculos da parte externa das coxas e dos glúteos, especialmente o glúteo médio, através de um movimento de abdução do quadril.",
+    "image": "assets/images/Cadeira-Abdutora.png",
+    "gif": "",
+    "instructions": "Sente-se na máquina e posicione a parte externa dos joelhos contra os apoios. Mantenha as costas retas. Faça força para afastar as pernas, empurrando os apoios para fora. Retorne à posição inicial de forma controlada.",
+    "exercises": [
+      "Glúteo Médio",
+      "Tensor da Fáscia Lata"
+    ]
+  },
+  {
+    "id": "812304",
+    "name": "Cadeira Adutora",
+    "description": "Equipamento focado no fortalecimento da parte interna da coxa (músculos adutores), importante para a estabilidade do quadril e dos joelhos.",
+    "image": "assets/images/Cadeira-Abdutora.png",
+    "gif": "",
+    "instructions": "Sente-se na máquina e posicione a parte interna dos joelhos contra os apoios. Ajuste a máquina para uma amplitude de movimento confortável. Faça força para fechar as pernas, aproximando os apoios. Retorne lentamente à posição inicial.",
+    "exercises": [
+      "Adutores da coxa"
+    ]
+  },
+  {
+    "id": "337859",
+    "name": "Cadeira Extensora",
+    "description": "Máquina de isolamento que visa o fortalecimento do quadríceps, o grupo muscular na parte frontal da coxa.",
+    "image": "assets/images/Cadeira-Extensora.png",
+    "gif": "",
+    "instructions": "Sente-se na cadeira e posicione os tornozelos atrás do rolo de apoio. Ajuste o encosto e o rolo para que fiquem confortáveis. Estenda as pernas para cima até que estejam retas, contraindo o quadríceps. Desça o peso de forma controlada.",
+    "exercises": [
+      "Quadríceps"
+    ]
+  },
+  {
+    "id": "591640",
+    "name": "Cadeira Flexora",
+    "description": "Versão sentada do exercício para posteriores de coxa, focando nos isquiotibiais através da flexão dos joelhos.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina, ajustando o encosto para que seus joelhos fiquem alinhados com o eixo de rotação. Prenda o rolo de apoio sobre as coxas e posicione os tornozelos sob o rolo inferior. Puxe o rolo para baixo, flexionando os joelhos o máximo possível. Retorne de forma controlada.",
+    "exercises": [
+      "Isquiotibiais"
+    ]
+  },
+  {
+    "id": "764291",
+    "name": "Graviton",
+    "description": "Máquina com assistência de peso que facilita a execução de exercícios como a barra fixa e as barras paralelas, ideal para quem ainda não consegue realizar o movimento com o peso corporal completo.",
+    "image": "",
+    "gif": "",
+    "instructions": "Selecione o peso de assistência (quanto maior o peso, mais fácil o exercício). Suba na plataforma de apoio dos joelhos e segure na barra desejada (pegada para barra fixa ou paralelas). Execute o movimento (puxar o corpo para cima ou empurrar), e a máquina ajudará a levantar seu peso. Desça de forma controlada.",
+    "exercises": [
+      "Latíssimo do Dorso",
+      "Bíceps",
+      "Peitoral Inferior",
+      "Tríceps",
+      "Ombros"
     ]
   }
 ]

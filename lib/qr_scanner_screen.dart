@@ -80,8 +80,8 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Escanear Equipamento"),
-        backgroundColor: Colors.green,
+        title: const Text("Leitor de QR Code"),
+        backgroundColor: Colors.grey[200],
       ),
       body: MobileScanner(
         controller: controller,
