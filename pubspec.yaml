@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  flutter_launcher_icons: ^0.13.1
   flutter:
     sdk: flutter
   audioplayers: ^5.2.0
@@ -37,6 +38,15 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app-icon.png"
+  adaptive_icon_background: "#ffffff"
+#  adaptive_icon_foreground: "#000000"
+
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +79,7 @@ flutter:
     - assets/sounds/beep.mp3
     - assets/sounds/done.mp3
     - assets/data/chat_data.json
+    - assets/icon/app-icon.png
 
 
 
