@@ -3,7 +3,7 @@
     "id": "831902",
     "name": "Leg Press 45°",
     "description": "Máquina para fortalecimento dos membros inferiores, focando em quadríceps, glúteos e isquiotibiais com uma angulação de 45 graus que permite a utilização de altas cargas.",
-    "image": "assets/images/Leg-press-45.png",
+    "image": "",
     "gif": "",
     "instructions": "Sente-se no aparelho com as costas e o quadril bem apoiados. Posicione os pés na plataforma na largura dos ombros. Destrave a segurança e flexione os joelhos, descendo a plataforma de forma controlada. Empurre de volta à posição inicial sem travar os joelhos no final do movimento.",
     "exercises": [
@@ -16,7 +16,7 @@
     "id": "603387",
     "name": "Hack Machine",
     "description": "Equipamento que simula o movimento de um agachamento, mas com o corpo apoiado em um encosto inclinado, o que proporciona maior segurança para a coluna e isolamento dos músculos das pernas.",
-    "image": "assets/images/Hack-Squat-Machine.png",
+    "image": "",
     "gif": "",
     "instructions": "Posicione-se no aparelho com as costas apoiadas no encosto e os ombros sob os apoios acolchoados. Coloque os pés na plataforma, um pouco à frente. Destrave o aparelho e agache, flexionando os joelhos até formar um ângulo de 90 graus. Empurre a plataforma de volta à posição inicial.",
     "exercises": [
@@ -40,7 +40,7 @@
     "id": "455813",
     "name": "Cadeira Abdutora",
     "description": "Máquina que visa fortalecer os músculos da parte externa das coxas e dos glúteos, especialmente o glúteo médio, através de um movimento de abdução do quadril.",
-    "image": "assets/images/Cadeira-Abdutora.png",
+    "image": "",
     "gif": "",
     "instructions": "Sente-se na máquina e posicione a parte externa dos joelhos contra os apoios. Mantenha as costas retas. Faça força para afastar as pernas, empurrando os apoios para fora. Retorne à posição inicial de forma controlada.",
     "exercises": [
@@ -52,7 +52,7 @@
     "id": "812304",
     "name": "Cadeira Adutora",
     "description": "Equipamento focado no fortalecimento da parte interna da coxa (músculos adutores), importante para a estabilidade do quadril e dos joelhos.",
-    "image": "assets/images/Cadeira-Abdutora.png",
+    "image": "",
     "gif": "",
     "instructions": "Sente-se na máquina e posicione a parte interna dos joelhos contra os apoios. Ajuste a máquina para uma amplitude de movimento confortável. Faça força para fechar as pernas, aproximando os apoios. Retorne lentamente à posição inicial.",
     "exercises": [
@@ -63,7 +63,7 @@
     "id": "337859",
     "name": "Cadeira Extensora",
     "description": "Máquina de isolamento que visa o fortalecimento do quadríceps, o grupo muscular na parte frontal da coxa.",
-    "image": "assets/images/Cadeira-Extensora.png",
+    "image": "",
     "gif": "",
     "instructions": "Sente-se na cadeira e posicione os tornozelos atrás do rolo de apoio. Ajuste o encosto e o rolo para que fiquem confortáveis. Estenda as pernas para cima até que estejam retas, contraindo o quadríceps. Desça o peso de forma controlada.",
     "exercises": [
@@ -94,6 +94,229 @@
       "Peitoral Inferior",
       "Tríceps",
       "Ombros"
+    ]
+  },
+  {
+    "id": "284017",
+    "name": "Puxada Alta (Pulley)",
+    "description": "Equipamento utilizado para fortalecer os músculos das costas, principalmente o latíssimo do dorso (grande dorsal), simulando o movimento de uma barra fixa com maior controle.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se no banco e ajuste o apoio dos joelhos para que fiquem firmes. Segure a barra com uma pegada mais aberta que a largura dos ombros. Puxe a barra para baixo em direção à parte superior do peito, contraindo os músculos das costas. Retorne à posição inicial de forma controlada.",
+    "exercises": [
+      "Latíssimo do Dorso",
+      "Bíceps",
+      "Romboides"
+    ]
+  },
+  {
+    "id": "739521",
+    "name": "Remada Baixa (Sentado)",
+    "description": "Máquina que trabalha os músculos das costas, como o latíssimo do dorso e romboides, através de um movimento de puxada horizontal, promovendo espessura e força.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina com os pés apoiados e os joelhos levemente flexionados. Segure o puxador e, com as costas retas, puxe-o em direção ao abdômen, unindo as escápulas. Retorne lentamente à posição inicial, alongando bem as costas.",
+    "exercises": [
+      "Latíssimo do Dorso",
+      "Romboides",
+      "Trapézio",
+      "Bíceps"
+    ]
+  },
+  {
+    "id": "118364",
+    "name": "Supino Máquina (Chest Press)",
+    "description": "Equipamento para o fortalecimento do peitoral, deltoides e tríceps, oferecendo um movimento guiado e mais seguro que o supino com pesos livres.",
+    "image": "",
+    "gif": "",
+    "instructions": "Ajuste a altura do banco para que as manoplas fiquem na altura do meio do peito. Sente-se com as costas bem apoiadas. Empurre as manoplas para a frente até a extensão quase total dos cotovelos, sem travá-los. Retorne de forma controlada.",
+    "exercises": [
+      "Peitoral Maior",
+      "Deltoide Anterior",
+      "Tríceps"
+    ]
+  },
+  {
+    "id": "902745",
+    "name": "Desenvolvimento de Ombros (Máquina)",
+    "description": "Máquina projetada para o fortalecimento dos músculos dos ombros (deltoides), de forma segura e com maior isolamento muscular, minimizando o risco de lesões.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina com as costas totalmente apoiadas. Ajuste a altura do banco para que as manoplas fiquem aproximadamente na altura dos ombros. Empurre as manoplas para cima até estender os braços. Desça de forma controlada até a posição inicial.",
+    "exercises": [
+      "Deltoides",
+      "Tríceps"
+    ]
+  },
+  {
+    "id": "533198",
+    "name": "Mesa Flexora",
+    "description": "Equipamento focado no trabalho dos músculos isquiotibiais (posteriores da coxa) e panturrilhas, realizado na posição deitada (decúbito ventral).",
+    "image": "",
+    "gif": "",
+    "instructions": "Deite-se de bruços na mesa, com os joelhos logo após a borda do banco para permitir o movimento livre. Posicione os tornozelos sob o rolo acolchoado. Flexione os joelhos, puxando o rolo em direção aos glúteos. Retorne à posição inicial de forma controlada.",
+    "exercises": [
+      "Isquiotibiais",
+      "Gastrocnêmio"
+    ]
+  },
+  {
+    "id": "257833",
+    "name": "Panturrilha Sentado (Máquina)",
+    "description": "Máquina específica para o fortalecimento do músculo sóleo, uma parte importante e profunda da panturrilha, fundamental para a estabilidade do tornozelo.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina e coloque a ponta dos pés na plataforma, com os calcanhares para fora. Posicione o apoio acolchoado sobre a parte inferior das coxas, próximo aos joelhos. Empurre a plataforma para cima, elevando os calcanhares o máximo possível. Desça lentamente, alongando a panturrilha.",
+    "exercises": [
+      "Sóleo"
+    ]
+  },
+  {
+    "id": "184633",
+    "name": "Elevação Pélvica (Máquina)",
+    "description": "Máquina projetada para realizar a elevação pélvica com carga, focando intensamente no fortalecimento e hipertrofia dos glúteos com maior estabilidade e segurança.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina com a parte superior das costas apoiada no encosto e os pés na plataforma. Posicione a almofada sobre o quadril e ajuste o cinto de segurança. Empurre o quadril para cima, contraindo os glúteos no topo do movimento. Desça de forma controlada.",
+    "exercises": [
+      "Glúteo Máximo",
+      "Isquiotibiais"
+    ]
+  },
+  {
+    "id": "409581",
+    "name": "Remada Cavalinho (Máquina)",
+    "description": "Equipamento que simula a remada curvada com barra T, mas com o peito apoiado, o que reduz a tensão na lombar e isola melhor os músculos dorsais.",
+    "image": "",
+    "gif": "",
+    "instructions": "Ajuste a altura da plataforma dos pés. Deite-se com o peito no apoio acolchoado e segure as manoplas com a pegada desejada (aberta ou fechada). Puxe as manoplas em direção ao seu corpo, contraindo as costas. Retorne lentamente à posição inicial.",
+    "exercises": [
+      "Latíssimo do Dorso",
+      "Romboides",
+      "Deltoide Posterior"
+    ]
+  },
+  {
+    "id": "882410",
+    "name": "Panturrilha em Pé (Máquina)",
+    "description": "Máquina para trabalhar os músculos da panturrilha, especialmente os gastrocnêmios, na posição vertical. Permite o uso de cargas elevadas com segurança.",
+    "image": "",
+    "gif": "",
+    "instructions": "Posicione-se na máquina com os ombros sob os apoios acolchoados. Coloque a ponta dos pés na plataforma, deixando os calcanhares livres. Mantenha as pernas estendidas e eleve os calcanhares o máximo possível. Desça lentamente até sentir o alongamento.",
+    "exercises": [
+      "Gastrocnêmio",
+      "Sóleo"
+    ]
+  },
+  {
+    "id": "317852",
+    "name": "Rosca Scott (Máquina)",
+    "description": "Máquina que replica o exercício rosca Scott, isolando o bíceps braquial ao apoiar a parte de trás do braço em um suporte inclinado, impedindo o uso de outros músculos.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se e ajuste a altura do banco para que suas axilas fiquem próximas ao topo do apoio. Segure as manoplas com a palma da mão para cima. Puxe as manoplas em direção aos ombros, contraindo o bíceps. Retorne à posição inicial de forma controlada.",
+    "exercises": [
+      "Bíceps Braquial",
+      "Braquial"
+    ]
+  },
+  {
+    "id": "554321",
+    "name": "Tríceps Máquina (Mergulho)",
+    "description": "Equipamento que simula o movimento de mergulho em barras paralelas, focando no fortalecimento do tríceps com grande segurança e isolamento.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina e ajuste a altura do banco. Segure as manoplas com as palmas das mãos voltadas para dentro. Empurre as manoplas para baixo até a extensão completa dos cotovelos, contraindo o tríceps. Retorne à posição inicial de forma controlada.",
+    "exercises": [
+      "Tríceps Braquial",
+      "Peitoral Inferior",
+      "Deltoide Anterior"
+    ]
+  },
+  {
+    "id": "698473",
+    "name": "Abdominal Máquina",
+    "description": "Máquina que permite adicionar carga ao exercício abdominal, promovendo a hipertrofia do reto abdominal de forma controlada e segura para a coluna.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina, ajuste o encosto e posicione os pés nos apoios. Segure as manoplas ou posicione os braços sobre os rolos acolchoados. Flexione o tronco para a frente, contraindo o abdômen. Retorne lentamente à posição inicial.",
+    "exercises": [
+      "Reto Abdominal"
+    ]
+  },
+  {
+    "id": "913584",
+    "name": "Elevação Lateral (Máquina)",
+    "description": "Equipamento desenhado para isolar a porção medial do deltoide, responsável pela largura dos ombros, através do movimento de elevação lateral com carga.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina com as costas apoiadas. Posicione a parte externa dos braços contra os apoios acolchoados. Eleve os braços lateralmente até a altura dos ombros. Desça de forma controlada.",
+    "exercises": [
+      "Deltoide Medial",
+      "Deltoide Anterior"
+    ]
+  },
+  {
+    "id": "246813",
+    "name": "Leg Press Horizontal",
+    "description": "Variação do leg press realizada na posição sentada, com o movimento de empurrar para a frente. É uma alternativa ao Leg 45°, frequentemente usada para variar o estímulo.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se no aparelho com as costas totalmente apoiadas. Coloque os pés na plataforma na largura dos ombros. Empurre a plataforma para a frente até estender quase completamente os joelhos. Retorne de forma controlada, flexionando os joelhos.",
+    "exercises": [
+      "Quadríceps",
+      "Isquiotibiais",
+      "Glúteo Máximo"
+    ]
+  },
+  {
+    "id": "753195",
+    "name": "Crucifixo Inverso (Máquina)",
+    "description": "Máquina focada no fortalecimento dos músculos da parte posterior dos ombros (deltoide posterior) e superior das costas (romboides e trapézio).",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se de frente para a máquina, com o peito apoiado no encosto. Segure as manoplas com uma pegada pronada (palmas para baixo). Puxe as manoplas para trás, abrindo os braços e unindo as escápulas. Retorne à posição inicial de forma controlada.",
+    "exercises": [
+      "Deltoide Posterior",
+      "Romboides",
+      "Trapézio"
+    ]
+  },
+  {
+    "id": "824671",
+    "name": "Pulldown (Máquina)",
+    "description": "Equipamento que trabalha o latíssimo do dorso e o peitoral com um movimento de puxada de cima para baixo com os braços semi-estendidos.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina com o peito apoiado no encosto. Segure a barra superior com os braços estendidos. Puxe a barra para baixo em um movimento de arco até a altura do quadril, mantendo os cotovelos levemente flexionados. Retorne controladamente.",
+    "exercises": [
+      "Latíssimo do Dorso",
+      "Peitoral Maior",
+      "Serrátil Anterior"
+    ]
+  },
+  {
+    "id": "193746",
+    "name": "Glúteo Coice (Máquina)",
+    "description": "Máquina específica para isolar os glúteos através de um movimento de extensão do quadril, similar a um 'coice', permitindo alta concentração no músculo.",
+    "image": "",
+    "gif": "",
+    "instructions": "Apoie o peito e o abdômen no suporte. Posicione um dos pés na plataforma móvel. Empurre a plataforma para trás e para cima, contraindo o glúteo da perna em movimento. Retorne lentamente à posição inicial e repita antes de trocar de perna.",
+    "exercises": [
+      "Glúteo Máximo",
+      "Isquiotibiais"
+    ]
+  },
+  {
+    "id": "502864",
+    "name": "Lombar Máquina (Extensão de Tronco)",
+    "description": "Equipamento projetado para fortalecer os músculos eretores da espinha, na região lombar, através de um movimento controlado de extensão do tronco.",
+    "image": "",
+    "gif": "",
+    "instructions": "Sente-se na máquina e ajuste o apoio das costas para que fique na altura da parte superior da lombar. Posicione os pés firmemente nos suportes. Empurre o corpo para trás, estendendo a coluna contra a resistência. Retorne à posição inicial de forma lenta e controlada.",
+    "exercises": [
+      "Eretores da Espinha",
+      "Glúteo Máximo"
     ]
   }
 ]
