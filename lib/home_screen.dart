@@ -5,15 +5,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Defina a versão do seu app aqui para fácil manutenção
+    const String appVersion = "Alpha 0.1.0";
+
     return Scaffold(
       // Barra superior com título e ícones
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.menu),
-          onPressed: () {
-            // Ação futura para abrir o menu lateral
-          },
-        ),
+        // O Flutter adiciona e configura automaticamente o botão de menu
+        // quando um 'drawer' é definido no Scaffold.
+        // Por isso, podemos remover o 'leading' que você tinha.
         title: const Text('GymBuddy 🏋️'),
         centerTitle: true,
         actions: [
@@ -26,7 +26,45 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
 
-      // Conteúdo principal
+      // NOVO: Adicionando o Drawer (menu lateral)
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            // Um cabeçalho para o menu, fica mais bonito
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor, // Usa a cor primária do seu tema
+              ),
+              child: const Center(
+                child: Text(
+                  'GymBuddy',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+            ),
+
+            // Este 'Spacer' empurra o item de versão para o final da tela
+            const Spacer(),
+
+            // Usando um ListTile simples para exibir a versão sem ser clicável
+            ListTile(
+              leading: Icon(
+                Icons.info_outline,
+                color: Theme.of(context).textTheme.bodySmall?.color, // Cor sutil
+              ),
+              title: Text('Versão $appVersion'),
+              dense: true,
+            ),
+
+            const SizedBox(height: 8), // Um pequeno espaço na parte inferior
+          ],
+        ),
+      ),
+
+      // Conteúdo principal (permanece o mesmo)
       body: Container(
         color: Colors.grey[200],
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
@@ -34,7 +72,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             _buildImageCard(
               context,
-              'assets/images/treino.jpg',
+              'assets/images/treino.webp',
               Icons.play_arrow,
                   () {
                 Navigator.pushNamed(context, '/treino');
@@ -43,7 +81,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 24),
             _buildImageCard(
               context,
-              'assets/images/esteira.jpg',
+              'assets/images/esteira.webp',
               Icons.access_time,
                   () {
                 Navigator.pushNamed(context, '/cronometro');
@@ -53,7 +91,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
 
-      // Dois botões flutuantes lado a lado
+      // Dois botões flutuantes lado a lado (permanece o mesmo)
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
