@@ -6,8 +6,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Defina a versão do seu app aqui para fácil manutenção
-    const String appVersion = "Alpha 0.1.0";
-
+    const String appVersion = "Release 1.0.0";
+    const String appName = "GymBuddy";
+    const String Owner = "Renan Ferreira";
     return Scaffold(
       // Barra superior com título e ícones
       appBar: AppBar(
@@ -46,10 +47,20 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
 
-            // Este 'Spacer' empurra o item de versão para o final da tela
+            // Este 'Spacer' empurra os itens para o final da tela
             const Spacer(),
 
-            // Usando um ListTile simples para exibir a versão sem ser clicável
+            // Novo ListTile para exibir o nome do criador
+            ListTile(
+              leading: Icon(
+                Icons.person,
+                color: Theme.of(context).textTheme.bodySmall?.color, // Cor sutil
+              ),
+              title: const Text('Criador: Renan Ferreira'),
+              dense: true,
+            ),
+
+            // Usando um ListTile simples para exibir a versão
             ListTile(
               leading: Icon(
                 Icons.info_outline,

@@ -1,0 +1,248 @@
+[
+  {
+    "name": "Supino Reto com Barra"
+  },
+  {
+    "name": "Supino Inclinado com Halteres"
+  },
+  {
+    "name": "Crucifixo na Máquina"
+  },
+  {
+    "name": "Puxada Alta Frontal"
+  },
+  {
+    "name": "Remada Curvada com Barra"
+  },
+  {
+    "name": "Remada Cavalinho"
+  },
+  {
+    "name": "Desenvolvimento com Halteres"
+  },
+  {
+    "name": "Elevação Lateral"
+  },
+  {
+    "name": "Rosca Direta com Barra"
+  },
+  {
+    "name": "Rosca Martelo"
+  },
+  {
+    "name": "Tríceps na Polia com Corda"
+  },
+  {
+    "name": "Tríceps Francês"
+  },
+  {
+    "name": "Agachamento Livre"
+  },
+  {
+    "name": "Leg Press 45°"
+  },
+  {
+    "name": "Cadeira Extensora"
+  },
+  {
+    "name": "Mesa Flexora"
+  },
+  {
+    "name": "Panturrilha em Pé"
+  },
+  {
+    "name": "Supino Reto com Halteres"
+  },
+  {
+    "name": "Supino Inclinado com Barra"
+  },
+  {
+    "name": "Supino Declinado com Barra"
+  },
+  {
+    "name": "Crucifixo com Halteres no Banco Reto"
+  },
+  {
+    "name": "Puxada Alta Atrás da Nuca"
+  },
+  {
+    "name": "Remada Baixa Sentado"
+  },
+  {
+    "name": "Remada Unilateral com Halter"
+  },
+  {
+    "name": "Desenvolvimento Militar com Barra"
+  },
+  {
+    "name": "Encolhimento de Ombros com Barra"
+  },
+  {
+    "name": "Elevação Frontal com Halteres"
+  },
+  {
+    "name": "Rosca Scott"
+  },
+  {
+    "name": "Rosca Concentrada"
+  },
+  {
+    "name": "Tríceps Testa"
+  },
+  {
+    "name": "Tríceps Coice com Halteres"
+  },
+  {
+    "name": "Afundo com Halteres"
+  },
+  {
+    "name": "Passada no Smith"
+  },
+  {
+    "name": "Cadeira Adutora"
+  },
+  {
+    "name": "Cadeira Abdutora"
+  },
+  {
+    "name": "Stiff com Barra"
+  },
+  {
+    "name": "Levantamento Terra"
+  },
+  {
+    "name": "Avanço com Barra"
+  },
+  {
+    "name": "Glúteo no Cabo"
+  },
+  {
+    "name": "Elevação Pélvica no Banco"
+  },
+  {
+    "name": "Panturrilha Sentado"
+  },
+  {
+    "name": "Burpee"
+  },
+  {
+    "name": "Flexão de Braço"
+  },
+  {
+    "name": "Abdominal Supra no Solo"
+  },
+  {
+    "name": "Abdominal Infra na Barra Fixa"
+  },
+  {
+    "name": "Prancha Abdominal"
+  },
+  {
+    "name": "Abdominal Máquina"
+  },
+  {
+    "name": "Barra Fixa"
+  },
+  {
+    "name": "Paralela (Tríceps no Banco)"
+  },
+  {
+    "name": "Corrida na Esteira"
+  },
+  {
+    "name": "Bicicleta Ergométrica"
+  },
+  {
+    "name": "Escada (Step)"
+  },
+  {
+    "name": "Remo Ergométrico"
+  },
+  {
+    "name": "Pular Corda"
+  },
+  {
+    "name": "Polichinelo"
+  },
+  {
+    "name": "Corrida Estacionária"
+  },
+  {
+    "name": "Escalador (Mountain Climber)"
+  },
+  {
+    "name": "Salto no Caixote (Box Jump)"
+  },
+  {
+    "name": "Agachamento com Salto"
+  },
+  {
+    "name": "Flexão de Braço com Batida de Mão"
+  },
+  {
+    "name": "Burpee com Salto"
+  },
+  {
+    "name": "Prancha com Rotação"
+  },
+  {
+    "name": "Prancha Lateral"
+  },
+  {
+    "name": "Abdominal Bicicleta"
+  },
+  {
+    "name": "Abdominal Oblíquo no Solo"
+  },
+  {
+    "name": "Abdominal Canivete"
+  },
+  {
+    "name": "Abdominal Prancha com Elevação de Perna"
+  },
+  {
+    "name": "Abdominal Prancha com Toque no Ombro"
+  },
+  {
+    "name": "Abdominal Escalador Cruzado"
+  },
+  {
+    "name": "Kettlebell Swing"
+  },
+  {
+    "name": "Arremesso de Bola no Solo (Slam Ball)"
+  },
+  {
+    "name": "Corrida com Anilha ou Peso"
+  },
+  {
+    "name": "Farmer Walk (Caminhada do Fazendeiro)"
+  },
+  {
+    "name": "Peck Deck (Voador)"
+  },
+  {
+    "name": "Pullover"
+  },
+  {
+    "name": "Encolhimento de Ombros com Halteres"
+  },
+  {
+    "name": "Rosca Direta com Halteres"
+  },
+  {
+    "name": "Tríceps na Polia com Barra"
+  },
+  {
+    "name": "Agachamento no Smith"
+  },
+  {
+    "name": "Agachamento Hack"
+  },
+  {
+    "name": "Leg Press Horizontal"
+  },
+  {
+    "name": "Panturrilha no Leg Press"
+  }
+]
