@@ -31,7 +31,7 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
   @override
   void initState() {
     super.initState();
-    currentDuration = const Duration(seconds: 5); // fase de preparo
+    currentDuration = const Duration(seconds: 5);
     _startTimer();
   }
 
@@ -49,17 +49,17 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
     });
   }
 
-  void _handleTimerTransition() async {
+  void _handleTimerTransition() {
     if (isPreparing) {
       isPreparing = false;
       isWorkout = true;
       currentDuration = widget.workoutTime;
-      await _playBeep();
+      _playBeep();
     } else {
       if (!isWorkout) currentSet++;
 
       if (currentSet > widget.totalSets) {
-        await _playDone();
+        _playDone();
         timer.cancel();
         _showCompletedDialog();
         return;
@@ -67,7 +67,7 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
 
       isWorkout = !isWorkout;
       currentDuration = isWorkout ? widget.workoutTime : widget.restTime;
-      await _playBeep();
+      _playBeep();
     }
   }
 
@@ -84,12 +84,11 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
       context: context,
       builder: (_) => AlertDialog(
         title: const Text('Treino Concluído!'),
-        //content: const Text('Parabéns por completar todos os ciclos.'),
         actions: [
           TextButton(
             onPressed: () {
-              Navigator.pop(context); // Fecha alerta
-              Navigator.pop(context); // Volta para a tela anterior
+              Navigator.pop(context);
+              Navigator.pop(context);
             },
             child: const Text('OK'),
           ),

@@ -4,11 +4,9 @@ import 'cronometro_screen.dart';
 import 'execucao_screen.dart';
 import 'qr_scanner_screen.dart';
 import 'equipment_detail_screen.dart';
-import 'criar_treino_screen.dart'; // Import mantido conforme solicitado
-// Import outras telas conforme forem criadas
+import 'criar_treino_screen.dart';
 import 'chat_screen.dart';
 import 'treinos_screen.dart';
-// import 'treino_screen.dart';
 
 void main() {
   runApp(const GymBuddyApp());
@@ -27,14 +25,11 @@ class GymBuddyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const HomeScreen(),
-
-      // Rotas nomeadas do app
       routes: {
         '/cronometro': (context) => const CronometroScreen(),
         '/chat': (context) => const ChatScreen(),
         '/qrscanner': (context) => const QRScannerScreen(),
         '/treino': (context) => const TreinosScreen(),
-        // Adicione mais rotas conforme necessário
       },
     );
   }

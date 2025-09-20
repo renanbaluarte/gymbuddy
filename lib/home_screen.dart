@@ -5,36 +5,24 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Defina a versão do seu app aqui para fácil manutenção
     const String appVersion = "Release 1.0.0";
-    const String appName = "GymBuddy";
-    const String Owner = "Renan Ferreira";
     return Scaffold(
-      // Barra superior com título e ícones
       appBar: AppBar(
-        // O Flutter adiciona e configura automaticamente o botão de menu
-        // quando um 'drawer' é definido no Scaffold.
-        // Por isso, podemos remover o 'leading' que você tinha.
         title: const Text('GymBuddy 🏋️'),
         centerTitle: true,
         actions: [
           IconButton(
             icon: const Icon(Icons.account_circle),
-            onPressed: () {
-              // Ação futura para abrir perfil do usuário
-            },
+            onPressed: () {},
           ),
         ],
       ),
-
-      // NOVO: Adicionando o Drawer (menu lateral)
       drawer: Drawer(
         child: Column(
           children: <Widget>[
-            // Um cabeçalho para o menu, fica mais bonito
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor, // Usa a cor primária do seu tema
+                color: Theme.of(context).primaryColor,
               ),
               child: const Center(
                 child: Text(
@@ -46,36 +34,27 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-
-            // Este 'Spacer' empurra os itens para o final da tela
             const Spacer(),
-
-            // Novo ListTile para exibir o nome do criador
             ListTile(
               leading: Icon(
                 Icons.person,
-                color: Theme.of(context).textTheme.bodySmall?.color, // Cor sutil
+                color: Theme.of(context).textTheme.bodySmall?.color,
               ),
               title: const Text('Criador: Renan Ferreira'),
               dense: true,
             ),
-
-            // Usando um ListTile simples para exibir a versão
             ListTile(
               leading: Icon(
                 Icons.info_outline,
-                color: Theme.of(context).textTheme.bodySmall?.color, // Cor sutil
+                color: Theme.of(context).textTheme.bodySmall?.color,
               ),
               title: Text('Versão $appVersion'),
               dense: true,
             ),
-
-            const SizedBox(height: 8), // Um pequeno espaço na parte inferior
+            const SizedBox(height: 8),
           ],
         ),
       ),
-
-      // Conteúdo principal (permanece o mesmo)
       body: Container(
         color: Colors.grey[200],
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
@@ -85,7 +64,7 @@ class HomeScreen extends StatelessWidget {
               context,
               'assets/images/treino.webp',
               Icons.play_arrow,
-                  () {
+              () {
                 Navigator.pushNamed(context, '/treino');
               },
             ),
@@ -94,21 +73,18 @@ class HomeScreen extends StatelessWidget {
               context,
               'assets/images/esteira.webp',
               Icons.access_time,
-                  () {
+              () {
                 Navigator.pushNamed(context, '/cronometro');
               },
             ),
           ],
         ),
       ),
-
-      // Dois botões flutuantes lado a lado (permanece o mesmo)
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Botão de Chat
           FloatingActionButton(
-            heroTag: "chatBtn", // <- evita conflito de Hero
+            heroTag: "chatBtn",
             onPressed: () {
               Navigator.pushNamed(context, '/chat');
             },
@@ -116,7 +92,6 @@ class HomeScreen extends StatelessWidget {
             child: const Icon(Icons.chat),
           ),
           const SizedBox(width: 16),
-          // Botão de QR Code
           FloatingActionButton(
             heroTag: "qrBtn",
             onPressed: () {
@@ -131,13 +106,12 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  /// Método que constrói os cards com imagem e botão
   Widget _buildImageCard(
-      BuildContext context,
-      String imagePath,
-      IconData icon,
-      VoidCallback onPressed,
-      ) {
+    BuildContext context,
+    String imagePath,
+    IconData icon,
+    VoidCallback onPressed,
+  ) {
     return Center(
       child: Stack(
         children: [
