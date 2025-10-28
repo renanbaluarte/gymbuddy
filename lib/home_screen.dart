@@ -5,7 +5,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String appVersion = "Release 1.0.0";
+    final String appVersion = "Release 1.0.1";
     return Scaffold(
       appBar: AppBar(
         title: const Text('GymBuddy 🏋️'),
