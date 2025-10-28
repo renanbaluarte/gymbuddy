@@ -108,6 +108,10 @@ flutter:
     - assets/app-icon/app-icon.webp
 
 
+    - assets/sounds/beep.mp3
+    - assets/sounds/done.mp3
+
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
