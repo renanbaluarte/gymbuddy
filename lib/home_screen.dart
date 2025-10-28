@@ -5,7 +5,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String appVersion = "Release 1.0.0";
+    final String appVersion = "Release 1.0.0";
     return Scaffold(
       appBar: AppBar(
         title: const Text('GymBuddy 🏋️'),
@@ -22,13 +22,13 @@ class HomeScreen extends StatelessWidget {
           children: <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).colorScheme.primary,
               ),
-              child: const Center(
+              child: Center(
                 child: Text(
                   'GymBuddy',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Theme.of(context).colorScheme.onPrimary,
                     fontSize: 24,
                   ),
                 ),
@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: Container(
-        color: Colors.grey[200],
+        color: Theme.of(context).colorScheme.surfaceVariant,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
         child: Column(
           children: [
@@ -88,7 +88,7 @@ class HomeScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, '/chat');
             },
-            backgroundColor: Colors.green,
+            backgroundColor: Theme.of(context).colorScheme.primary,
             child: const Icon(Icons.chat),
           ),
           const SizedBox(width: 16),
@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, '/qrscanner');
             },
-            backgroundColor: Colors.green,
+            backgroundColor: Theme.of(context).colorScheme.primary,
             child: const Icon(Icons.qr_code_scanner),
           ),
         ],
@@ -130,12 +130,12 @@ class HomeScreen extends StatelessWidget {
             child: Container(
               width: 50,
               height: 50,
-              decoration: const BoxDecoration(
-                color: Colors.green,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
                 shape: BoxShape.circle,
               ),
               child: IconButton(
-                icon: Icon(icon, color: Colors.black, size: 30),
+                icon: Icon(icon, color: Theme.of(context).colorScheme.onPrimary, size: 30),
                 onPressed: onPressed,
                 splashRadius: 24,
               ),

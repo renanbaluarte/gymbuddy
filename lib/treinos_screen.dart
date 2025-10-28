@@ -69,10 +69,10 @@ class _TreinosScreenState extends State<TreinosScreen> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: treinos.isEmpty
-            ? const Center(
+            ? Center(
           child: Text(
             "Vazio por enquanto",
-            style: TextStyle(fontSize: 18, color: Colors.grey),
+            style: TextStyle(fontSize: 18, color: Theme.of(context).colorScheme.onSurfaceVariant),
           ),
         )
             : ListView.builder(
@@ -83,10 +83,10 @@ class _TreinosScreenState extends State<TreinosScreen> {
               key: UniqueKey(),
               direction: DismissDirection.endToStart,
               background: Container(
-                color: Colors.red,
+                color: Theme.of(context).colorScheme.error,
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 alignment: Alignment.centerRight,
-                child: const Icon(Icons.delete, color: Colors.white),
+                child: Icon(Icons.delete, color: Theme.of(context).colorScheme.onError),
               ),
               onDismissed: (direction) {
                 final removedTreino = treinos[index];
@@ -125,9 +125,9 @@ class _TreinosScreenState extends State<TreinosScreen> {
                   ),
                   trailing: CircleAvatar(
                     radius: 22,
-                    backgroundColor: Colors.green,
+                    backgroundColor: Theme.of(context).colorScheme.primary,
                     child: IconButton(
-                      icon: const Icon(Icons.play_arrow, color: Colors.black, size: 26),
+                      icon: Icon(Icons.play_arrow, color: Theme.of(context).colorScheme.onPrimary, size: 26),
                       onPressed: () => _navigateToDetalhe(index),
                     ),
                   ),
@@ -153,7 +153,7 @@ class _TreinosScreenState extends State<TreinosScreen> {
             ),
           );
         },
-        backgroundColor: Colors.green,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         child: const Icon(Icons.add),
       ),
     );

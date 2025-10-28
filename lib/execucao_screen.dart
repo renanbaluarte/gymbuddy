@@ -125,7 +125,7 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
             },
             child: const Text(
               'ENCERRAR',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(),
             ),
           )
         ],
@@ -146,10 +146,10 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: isPreparing
-                      ? Colors.orange
+                      ? Theme.of(context).colorScheme.secondary
                       : isWorkout
-                      ? Colors.green
-                      : Colors.blue,
+                          ? Theme.of(context).colorScheme.primary
+                          : Theme.of(context).colorScheme.tertiary,
                 ),
               ),
               const SizedBox(height: 24),
@@ -162,13 +162,13 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
                     CircularProgressIndicator(
                       value: percent,
                       strokeWidth: 12,
-                      backgroundColor: Colors.grey[300],
+                      backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
                       valueColor: AlwaysStoppedAnimation<Color>(
                         isPreparing
-                            ? Colors.orange
+                            ? Theme.of(context).colorScheme.secondary
                             : isWorkout
-                            ? Colors.green
-                            : Colors.blue,
+                                ? Theme.of(context).colorScheme.primary
+                                : Theme.of(context).colorScheme.tertiary,
                       ),
                     ),
                     Text(

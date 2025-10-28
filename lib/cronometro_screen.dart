@@ -107,7 +107,7 @@ class _CronometroScreenState extends State<CronometroScreen> {
               icon: const Icon(Icons.play_arrow),
               label: const Text('Iniciar Treino'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
+                backgroundColor: Theme.of(context).colorScheme.primary,
                 padding:
                 const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 textStyle:

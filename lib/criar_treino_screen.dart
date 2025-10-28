@@ -158,8 +158,11 @@ class _CriarTreinoScreenState extends State<CriarTreinoScreen> {
                   ),
                   const SizedBox(width: 8),
                   IconButton.filled(
-                    style: IconButton.styleFrom(backgroundColor: Colors.green),
-                    icon: const Icon(Icons.add, color: Colors.white),
+                    style: IconButton.styleFrom(
+                      backgroundColor: Theme.of(context).colorScheme.primary,
+                      foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                    ),
+                    icon: const Icon(Icons.add),
                     onPressed: _adicionarExercicio,
                   ),
                 ],
@@ -180,7 +183,7 @@ class _CriarTreinoScreenState extends State<CriarTreinoScreen> {
                       title: Text(e["name"]),
                       subtitle: Text("Repetições: ${e["reps"]}"),
                       trailing: IconButton(
-                        icon: const Icon(Icons.delete, color: Colors.red),
+                        icon: Icon(Icons.delete, color: Theme.of(context).colorScheme.error),
                         onPressed: () {
                           setState(() {
                             exerciciosAdicionados.removeAt(index);
@@ -196,10 +199,11 @@ class _CriarTreinoScreenState extends State<CriarTreinoScreen> {
               ElevatedButton(
                 onPressed: _salvarTreino,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  foregroundColor: Theme.of(context).colorScheme.onPrimary,
                   padding: const EdgeInsets.symmetric(vertical: 14),
                 ),
-                child: const Text("Salvar Treino", style: TextStyle(fontSize: 16, color: Colors.white)),
+                child: const Text("Salvar Treino", style: TextStyle(fontSize: 16)),
               ),
             ],
           ),

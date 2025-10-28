@@ -17,12 +17,37 @@ class GymBuddyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ColorScheme scheme = ColorScheme.fromSeed(
+      seedColor: const Color(0xFF2E7D32),
+      brightness: Brightness.light,
+    );
+
     return MaterialApp(
       title: 'GymBuddy',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: scheme,
         useMaterial3: true,
+        appBarTheme: AppBarTheme(
+          backgroundColor: scheme.primary,
+          foregroundColor: scheme.onPrimary,
+          centerTitle: true,
+        ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: scheme.primary,
+          foregroundColor: scheme.onPrimary,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: scheme.primary,
+            foregroundColor: scheme.onPrimary,
+          ),
+        ),
+        snackBarTheme: SnackBarThemeData(
+          backgroundColor: scheme.inverseSurface,
+          contentTextStyle: TextStyle(color: scheme.onInverseSurface),
+          actionTextColor: scheme.primary,
+        ),
       ),
       home: const HomeScreen(),
       routes: {

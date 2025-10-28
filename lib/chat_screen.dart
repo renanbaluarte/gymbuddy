@@ -85,7 +85,9 @@ class _ChatScreenState extends State<ChatScreen> {
         padding: const EdgeInsets.all(12),
         constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.75),
         decoration: BoxDecoration(
-          color: isUser ? Colors.green[200] : Colors.grey[300],
+          color: isUser
+              ? Theme.of(context).colorScheme.primaryContainer
+              : Theme.of(context).colorScheme.surfaceVariant,
           borderRadius: BorderRadius.only(
             topLeft: const Radius.circular(16),
             topRight: const Radius.circular(16),
@@ -93,7 +95,15 @@ class _ChatScreenState extends State<ChatScreen> {
             bottomRight: Radius.circular(isUser ? 0 : 16),
           ),
         ),
-        child: Text(text, style: const TextStyle(fontSize: 16)),
+        child: Text(
+          text,
+          style: TextStyle(
+            fontSize: 16,
+            color: isUser
+                ? Theme.of(context).colorScheme.onPrimaryContainer
+                : Theme.of(context).colorScheme.onSurface,
+          ),
+        ),
       ),
     );
   }
@@ -104,7 +114,6 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: AppBar(
         title: const Text("GymBuddy 🏋️"),
         centerTitle: true,
-        backgroundColor: Colors.white,
       ),
       body: Column(
         children: [
@@ -156,7 +165,7 @@ class _ChatScreenState extends State<ChatScreen> {
         },
         label: const Text("Fazer Pergunta"),
         icon: const Icon(Icons.question_answer),
-        backgroundColor: Colors.green,
+        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
     );
   }
