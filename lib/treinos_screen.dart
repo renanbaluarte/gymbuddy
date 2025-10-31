@@ -37,16 +37,11 @@ class _TreinosScreenState extends State<TreinosScreen> {
   }
 
   void _navigateToDetalhe(int index) async {
-    final updatedTreino = await Navigator.push(
+    final updatedTreino = await Navigator.push<Map<String, dynamic>>(
       context,
       MaterialPageRoute(
-        builder: (context) => CriarTreinoScreen(
-          onSave: (updatedTreino) {
-            setState(() {
-              treinos[index] = updatedTreino;
-            });
-            _saveTreinos();
-          },
+        builder: (context) => TreinoDetalheScreen(
+          treino: Map<String, dynamic>.from(treinos[index]),
         ),
       ),
     );
@@ -155,6 +150,63 @@ class _TreinosScreenState extends State<TreinosScreen> {
         },
         backgroundColor: Theme.of(context).colorScheme.primary,
         child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+class TreinoDetalheScreen extends StatefulWidget {
+  final Map<String, dynamic> treino;
+
+  const TreinoDetalheScreen({super.key, required this.treino});
+
+  @override
+  State<TreinoDetalheScreen> createState() => _TreinoDetalheScreenState();
+}
+
+class _TreinoDetalheScreenState extends State<TreinoDetalheScreen> {
+  late Map<String, dynamic> _treinoAtual;
+
+  @override
+  void initState() {
+    super.initState();
+    _treinoAtual = Map<String, dynamic>.from(widget.treino);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return WillPopScope(
+      onWillPop: () async {
+        Navigator.of(context).pop(_treinoAtual);
+        return false;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(_treinoAtual["name"] ?? "Detalhe"),
+          centerTitle: true,
+        ),
+        body: ListView.builder(
+          padding: const EdgeInsets.all(16),
+          itemCount: (_treinoAtual["exercises"] as List).length,
+          itemBuilder: (context, index) {
+            final exercicio = _treinoAtual["exercises"][index];
+            return Card(
+              child: ListTile(
+                leading: Checkbox(
+                  value: exercicio["done"] ?? false,
+                  onChanged: (value) {
+                    setState(() {
+                      exercicio["done"] = value ?? false;
+                    });
+                  },
+                  activeColor: Colors.green,
+                ),
+                title: Text(exercicio["name"] ?? ""),
+                subtitle: Text("Repetições: ${exercicio["reps"] ?? ""}"),
+              ),
+            );
+          },
+        ),
       ),
     );
   }
