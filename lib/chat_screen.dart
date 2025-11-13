@@ -2,6 +2,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
+/// Tela de FAQ em formato de chat simples.
+///
+/// Carrega pares de pergunta/resposta de um JSON local e simula a
+/// digitação de respostas para melhorar a experiência do usuário.
 class ChatScreen extends StatefulWidget {
   const ChatScreen({Key? key}) : super(key: key);
 
@@ -23,6 +27,7 @@ class _ChatScreenState extends State<ChatScreen> {
     loadQA();
   }
 
+  /// Carrega perguntas e respostas a partir do arquivo local em assets.
   Future<void> loadQA() async {
     final String jsonString = await rootBundle.loadString('assets/data/chat_data.json');
     final List<dynamic> jsonData = json.decode(jsonString);
@@ -37,6 +42,7 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
+  /// Faz scroll suave até a última mensagem, quando necessário.
   void _scrollToBottom() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
@@ -49,6 +55,7 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
+  /// Ao selecionar uma pergunta, publica a pergunta do usuário e inicia a resposta.
   void onQuestionSelected(String? question) {
     if (question == null) return;
 
@@ -65,6 +72,7 @@ class _ChatScreenState extends State<ChatScreen> {
     _simulateTyping(matched['resposta']!);
   }
 
+  /// Simula a digitação do bot para exibir a resposta de forma gradual.
   Future<void> _simulateTyping(String fullText) async {
     String currentText = "";
     for (int i = 0; i < fullText.length; i++) {
@@ -77,6 +85,7 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
 
+  /// Constrói um balão de mensagem alinhado conforme o autor (usuário/bot).
   Widget buildMessage(String text, bool isUser) {
     return Align(
       alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,

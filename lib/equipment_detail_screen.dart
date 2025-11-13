@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../models/equipment.dart';
 
+/// Exibe os detalhes de um equipamento de academia.
+///
+/// Mostra imagem, descrição, instruções de uso e exercícios sugeridos.
 class EquipmentDetailScreen extends StatelessWidget {
   final Equipment equipment;
 

@@ -1,3 +1,4 @@
+/// Modelo de dados que representa um equipamento de academia.
 class Equipment {
   final String id;
   final String name;
@@ -17,6 +18,7 @@ class Equipment {
     required this.exercises,
   });
 
+  /// Constrói uma instância [Equipment] a partir de um mapa JSON.
   factory Equipment.fromJson(Map<String, dynamic> json) {
     final exercisesFromJson = json['exercises'] as List<dynamic>?;
     final exercisesList = exercisesFromJson?.map((e) => e.toString()).toList() ?? [];

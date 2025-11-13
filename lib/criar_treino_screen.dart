@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle; // Para ler arquivos
 import 'dart:convert'; // Para decodificar o JSON
 
+/// Tela de criação de um novo treino.
+///
+/// Permite pesquisar exercícios disponíveis a partir de um JSON local
+/// e montar uma lista com séries/repetições antes de salvar.
 class CriarTreinoScreen extends StatefulWidget {
   final Function(Map<String, dynamic>) onSave;
 
@@ -30,6 +34,7 @@ class _CriarTreinoScreenState extends State<CriarTreinoScreen> {
     _carregarExerciciosDoJson();
   }
 
+  /// Lê a lista de exercícios do arquivo local em assets e extrai os nomes.
   Future<void> _carregarExerciciosDoJson() async {
     final String jsonString = await rootBundle.loadString('assets/exercicios.json');
     final List<dynamic> jsonResponse = json.decode(jsonString);
@@ -38,6 +43,7 @@ class _CriarTreinoScreenState extends State<CriarTreinoScreen> {
     });
   }
 
+  /// Adiciona um item de exercício à lista do treino em construção.
   void _adicionarExercicio() {
     if (_exercicioController.text.isNotEmpty && _repsController.text.isNotEmpty) {
       setState(() {
@@ -53,6 +59,7 @@ class _CriarTreinoScreenState extends State<CriarTreinoScreen> {
     }
   }
 
+  /// Consolida os dados do novo treino e devolve para a tela anterior.
   void _salvarTreino() {
     if (_treinoController.text.isNotEmpty && exerciciosAdicionados.isNotEmpty) {
       final novoTreino = {
@@ -99,28 +106,25 @@ class _CriarTreinoScreenState extends State<CriarTreinoScreen> {
 
               // Em criar_treino_screen.dart, dentro do método build:
 
+              // Campo com auto-completar para facilitar a busca de exercícios.
               Autocomplete<String>(
                 // Esta função está correta e não precisa de mudanças
                 optionsBuilder: (TextEditingValue textEditingValue) {
-                  // Adicionei um print para vermos em tempo real o que ele está fazendo
-                  print("Buscando por: '${textEditingValue.text}'");
                   if (textEditingValue.text == '') {
                     return const Iterable<String>.empty();
                   }
                   final suggestions = _todosOsExercicios.where((String option) {
                     return option.toLowerCase().contains(textEditingValue.text.toLowerCase());
                   });
-                  print("Encontrado: ${suggestions.length} sugestões");
                   return suggestions;
                 },
 
-                // onSelected também está correto
+                // Quando selecionado, atualiza o controller do exercício
                 onSelected: (String selection) {
                   _exercicioController.text = selection;
-                  print("Item selecionado: $selection");
                 },
 
-                // A CORREÇÃO PRINCIPAL ESTÁ AQUI DENTRO:
+                // Constrói o campo de texto com o controller controlado pelo Autocomplete
                 fieldViewBuilder: (BuildContext context,
                     TextEditingController fieldController, // Este é o controller do Autocomplete
                     FocusNode fieldFocusNode,

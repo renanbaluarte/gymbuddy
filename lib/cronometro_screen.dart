@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'execucao_screen.dart';
 
+/// Tela de configuração do cronômetro de treino.
+///
+/// Permite ajustar tempos de exercício e descanso, além do número de séries,
+/// e encaminha esses parâmetros para a tela de execução.
 class CronometroScreen extends StatefulWidget {
   const CronometroScreen({super.key});
 
@@ -53,8 +57,8 @@ class _CronometroScreenState extends State<CronometroScreen> {
     });
   }
 
-  String _formatDuration(Duration d) =>
-      d.toString().substring(2, 7); // Ex: "00:45"
+  /// Formata a duração no padrão mm:ss (ex.: "00:45").
+  String _formatDuration(Duration d) => d.toString().substring(2, 7);
 
   @override
   Widget build(BuildContext context) {

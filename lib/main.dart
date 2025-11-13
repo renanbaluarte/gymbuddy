@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
+// Telas principais do aplicativo
 import 'home_screen.dart';
 import 'cronometro_screen.dart';
-import 'execucao_screen.dart';
 import 'qr_scanner_screen.dart';
-import 'equipment_detail_screen.dart';
-import 'criar_treino_screen.dart';
 import 'chat_screen.dart';
 import 'treinos_screen.dart';
 
+/// Ponto de entrada da aplicação GymBuddy.
+///
+/// Responsável por executar o widget raiz [GymBuddyApp].
 void main() {
   runApp(const GymBuddyApp());
 }
 
+/// Widget raiz da aplicação.
+///
+/// Centraliza definições de tema, rotas nomeadas e a tela inicial.
 class GymBuddyApp extends StatelessWidget {
   const GymBuddyApp({super.key});
 
@@ -49,7 +53,9 @@ class GymBuddyApp extends StatelessWidget {
           actionTextColor: scheme.primary,
         ),
       ),
+      // Tela inicial do app
       home: const HomeScreen(),
+      // Rotas nomeadas para facilitar a navegação entre telas
       routes: {
         '/cronometro': (context) => const CronometroScreen(),
         '/chat': (context) => const ChatScreen(),

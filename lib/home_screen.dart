@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
+/// Tela inicial do GymBuddy.
+///
+/// Apresenta atalhos para as principais funcionalidades (treinos e cronômetro),
+/// além de um menu lateral com informações do app.
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+  // Versão exibida no menu lateral. Ajuste conforme release/tag.
     final String appVersion = "Release 1.0.2";
     return Scaffold(
       appBar: AppBar(
@@ -61,6 +66,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             _buildImageCard(
+            // Card para acessar a jornada de treinos salvos
               context,
               'assets/images/treino.webp',
               Icons.play_arrow,
@@ -70,6 +76,7 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             _buildImageCard(
+            // Card para acessar o cronômetro configurável de treino/descanso
               context,
               'assets/images/esteira.webp',
               Icons.access_time,
@@ -135,6 +142,7 @@ class HomeScreen extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
               child: IconButton(
+                // Encaminha para a ação informada (navegação)
                 icon: Icon(icon, color: Theme.of(context).colorScheme.onPrimary, size: 30),
                 onPressed: onPressed,
                 splashRadius: 24,

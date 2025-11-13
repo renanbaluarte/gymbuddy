@@ -1,63 +1,71 @@
 # GymBuddy 🏋️
 
-## Sobre o Projeto
+## Visão Geral
 
-**GymBuddy** é um aplicativo pensado para quem ama academia e quer organizar seus treinos de forma prática e eficiente. Com ele, você pode acompanhar seu progresso, usar ferramentas úteis como cronômetros e scanners de QR Code, e muito mais. A ideia é simples: facilitar sua vida na academia para que você possa focar no que realmente importa, seus resultados.
+O GymBuddy é um aplicativo mobile criado para apoiar quem treina na academia com organização, praticidade e foco no resultado. Com ele, você consegue estruturar treinos personalizados, controlar tempos de exercício e descanso, consultar informações de equipamentos via QR Code e tirar dúvidas rápidas em um chat simulado — tudo em um só lugar.
 
-O app estará disponível na **Google Play Store** para download. Ah, e se preferir, você também pode encontrar os arquivos de instalação (APK) na aba de [Releases](https://github.com/renanbaluarte/gymbuddy/releases) aqui no GitHub.
-
----
-
-## Funcionalidades Principais
-
-- **Organização de Treinos**: Crie, edite e salve seus treinos personalizados.
-- **Cronômetro Personalizável**: Configure tempos de treino e descanso para otimizar seus exercícios.
-- **Scanner de QR Code**: Escaneie QR Codes para obter informações detalhadas sobre equipamentos.
-- **Detalhes de Equipamentos**: Visualize informações completas sobre os equipamentos disponíveis na academia.
-- **Chat Simulado**: Interaja com um chatbot para tirar dúvidas comuns sobre treinos e equipamentos.
+O aplicativo estará disponível na **Google Play Store**. Caso prefira instalar manualmente, também publicamos os APKs na seção de [Releases](https://github.com/renanbaluarte/gymbuddy/releases).
 
 ---
 
-## Tecnologias e Bibliotecas Utilizadas
+## Funcionalidades
 
-O GymBuddy foi desenvolvido utilizando o framework **Flutter**. Abaixo estão listadas as principais bibliotecas utilizadas no projeto:
-
-- **flutter/material.dart**: Para construção da interface do usuário.
-- **shared_preferences**: Para armazenamento local de dados do usuário.
-- **mobile_scanner**: Para leitura de QR Codes.
-- **audioplayers**: Para reprodução de sons durante os treinos.
-- **dart:convert**: Para manipulação de dados em formato JSON.
-- **flutter/services.dart**: Para carregar arquivos locais, como JSONs.
+- Organização de treinos: crie, edite e salve rotinas personalizadas.
+- Cronômetro personalizável: defina tempos de treino e descanso por série.
+- Leitor de QR Code: identifique equipamentos e acesse detalhes rapidamente.
+- Detalhes de equipamentos: visualize instruções, descrição e exercícios sugeridos.
+- Chat simulado: acesse respostas rápidas para dúvidas comuns.
 
 ---
 
-## Como Instalar
+## Tecnologias
+
+Construído com **Flutter** e um conjunto enxuto de bibliotecas. Abaixo, as dependências diretas do projeto (conforme `pubspec.yaml`):
+
+Runtime/UI
+- `flutter/material.dart`: construção da interface.
+- `shared_preferences`: armazenamento local (preferências e dados simples).
+- `mobile_scanner`: leitura de QR Codes.
+- `audioplayers`: feedback sonoro durante a execução do treino.
+- `flutter_spinkit`: componentes de loading/indicadores (presente no projeto; uso opcional).
+- `dart:convert`: manipulação de dados JSON.
+- `flutter/services.dart`: carregamento de assets (ex.: arquivos JSON e sons).
+
+Ferramentas/Build
+- `flutter_launcher_icons`: geração de ícones do aplicativo.
+- `cupertino_icons`: conjunto de ícones iOS (opcional em telas que adotem esse estilo).
+
+Desenvolvimento
+- `flutter_test`: utilitário para testes de widget.
+- `flutter_lints`: conjunto de regras de lint recomendadas.
+
+---
+
+## Instalação e Execução
 
 ### Requisitos
 
-- **Flutter SDK**: Certifique-se de ter o Flutter instalado em sua máquina. [Guia de instalação do Flutter](https://docs.flutter.dev/get-started/install).
-- **Android Studio** ou outro emulador Android para testes.
+- **Flutter SDK** instalado. Consulte o [guia oficial](https://docs.flutter.dev/get-started/install).
+- **Android Studio** (ou outro emulador/dispositivo Android) para testes.
 
-### Passos para Instalação
+### Passos
 
-1. Clone este repositório:
+1) Clonar o repositório
    ```bash
    git clone https://github.com/renanbaluarte/gymbuddy.git
    ```
 
-2. Navegue até o diretório do projeto:
+2) Acessar o diretório do projeto
    ```bash
    cd gymbuddy
    ```
 
-3. Instale as dependências do projeto:
+3) Instalar dependências
    ```bash
    flutter pub get
    ```
 
-4. Conecte um dispositivo Android ou inicie um emulador.
-
-5. Execute o aplicativo:
+4) Executar o aplicativo (com um dispositivo/emulador conectado)
    ```bash
    flutter run
    ```
@@ -66,19 +74,26 @@ O GymBuddy foi desenvolvido utilizando o framework **Flutter**. Abaixo estão li
 
 ## Disponibilidade
 
-O GymBuddy estará disponível para download na **Google Play Store**. Para aqueles que preferirem, o arquivo APK também estará disponível na aba de [Releases](https://github.com/renanbaluarte/gymbuddy/releases) deste repositório.
+O GymBuddy será publicado na **Google Play Store**. Alternativamente, você encontra versões de instalação na seção de [Releases](https://github.com/renanbaluarte/gymbuddy/releases).
+
+---
+
+## Privacidade e Segurança
+
+- Arquivos sensíveis do Android (por exemplo, `key.properties`, `*.jks`, `local.properties`) não são versionados e estão protegidos via `.gitignore`.
+- O arquivo `google-services.json` costuma ser versionado por conveniência. Caso prefira não versioná-lo, é possível ajustar o `.gitignore`; avalie o impacto no seu fluxo de build/CI antes de alterar.
 
 ---
 
 ## Contribuição
 
-Contribuições são super bem-vindas! Se você tiver ideias, melhorias ou até mesmo encontrar algum bug, sinta-se à vontade para abrir issues ou enviar pull requests. Vamos construir algo incrível juntos!
+Contribuições são bem-vindas. Se tiver sugestões, melhorias ou identificar algum problema, abra uma issue ou envie um pull request. Comentários e discussões construtivas ajudam a evoluir o projeto com qualidade.
 
 ---
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE](LICENSE).
+Este projeto é distribuído sob a licença **MIT**. Para mais detalhes, consulte o arquivo [LICENSE](LICENSE).
 
 ---
 

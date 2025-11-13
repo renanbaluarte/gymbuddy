@@ -10,6 +10,8 @@ class TreinosScreen extends StatefulWidget {
   State<TreinosScreen> createState() => _TreinosScreenState();
 }
 
+  /// Estrutura em memória contendo a lista de treinos.
+  /// Cada treino possui os campos: `name` e `exercises` (lista de exercícios).
 class _TreinosScreenState extends State<TreinosScreen> {
   List<Map<String, dynamic>> treinos = [];
 
@@ -19,6 +21,7 @@ class _TreinosScreenState extends State<TreinosScreen> {
     _loadTreinos();
   }
 
+  /// Carrega os treinos persistidos no dispositivo.
   Future<void> _loadTreinos() async {
     final prefs = await SharedPreferences.getInstance();
     final String? treinosString = prefs.getString('treinos_lista');
@@ -30,12 +33,14 @@ class _TreinosScreenState extends State<TreinosScreen> {
     }
   }
 
+  /// Salva os treinos em armazenamento local (JSON em SharedPreferences).
   Future<void> _saveTreinos() async {
     final prefs = await SharedPreferences.getInstance();
     final String treinosString = json.encode(treinos);
     await prefs.setString('treinos_lista', treinosString);
   }
 
+  /// Navega para a tela de detalhe, retornando um treino possivelmente editado.
   void _navigateToDetalhe(int index) async {
     final updatedTreino = await Navigator.push<Map<String, dynamic>>(
       context,
@@ -83,6 +88,8 @@ class _TreinosScreenState extends State<TreinosScreen> {
                 alignment: Alignment.centerRight,
                 child: Icon(Icons.delete, color: Theme.of(context).colorScheme.onError),
               ),
+              // Permite apagar rapidamente um treino com gesto de arrastar.
+              // Apresenta também uma opção de desfazer via SnackBar.
               onDismissed: (direction) {
                 final removedTreino = treinos[index];
                 setState(() {
@@ -132,6 +139,7 @@ class _TreinosScreenState extends State<TreinosScreen> {
           },
         ),
       ),
+      // Atalho para criar rapidamente um novo treino
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
@@ -155,6 +163,10 @@ class _TreinosScreenState extends State<TreinosScreen> {
   }
 }
 
+/// Tela de detalhe de um treino específico.
+///
+/// Permite marcar exercícios como concluídos e devolve o estado atualizado
+/// ao retornar para a listagem.
 class TreinoDetalheScreen extends StatefulWidget {
   final Map<String, dynamic> treino;
 
@@ -165,6 +177,7 @@ class TreinoDetalheScreen extends StatefulWidget {
 }
 
 class _TreinoDetalheScreenState extends State<TreinoDetalheScreen> {
+  /// Cópia mutável do treino recebido para permitir alterações locais.
   late Map<String, dynamic> _treinoAtual;
 
   @override
@@ -175,6 +188,7 @@ class _TreinoDetalheScreenState extends State<TreinoDetalheScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Intercepta o gesto de voltar para retornar o treino atualizado.
     return WillPopScope(
       onWillPop: () async {
         Navigator.of(context).pop(_treinoAtual);

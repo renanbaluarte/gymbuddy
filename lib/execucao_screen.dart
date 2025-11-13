@@ -2,6 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
+/// Tela responsável por executar o cronograma de treino com contagem regressiva.
+///
+/// Controla as fases de preparo, exercício e descanso, tocando sinais sonoros
+/// a cada transição e exibindo o progresso visualmente.
 class ExecucaoScreen extends StatefulWidget {
   final Duration workoutTime;
   final Duration restTime;
@@ -35,6 +39,7 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
     _startTimer();
   }
 
+  /// Inicia o timer periódico e decrementa o tempo restante.
   void _startTimer() {
     timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (!isRunning) return;
@@ -49,6 +54,8 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
     });
   }
 
+  /// Regras de transição entre preparo -> exercício -> descanso.
+  /// Avança séries e finaliza quando todas tiverem sido concluídas.
   void _handleTimerTransition() {
     if (isPreparing) {
       isPreparing = false;
@@ -71,14 +78,17 @@ class _ExecucaoScreenState extends State<ExecucaoScreen> {
     }
   }
 
+  /// Emite um beep para marcar a transição de fase.
   Future<void> _playBeep() async {
     await _audioPlayer.play(AssetSource('sounds/beep.mp3'));
   }
 
+  /// Emite um som de conclusão ao finalizar todas as séries.
   Future<void> _playDone() async {
     await _audioPlayer.play(AssetSource('sounds/done.mp3'));
   }
 
+  /// Mostra um diálogo simples ao concluir o treino.
   void _showCompletedDialog() {
     showDialog(
       context: context,

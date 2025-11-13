@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'models/equipment.dart';
 import 'services/equipment_service.dart';
 import 'equipment_detail_screen.dart';
 
+/// Tela de leitura de QR Code para identificar equipamentos.
+///
+/// Ao detectar um código, busca os dados do equipamento e navega para a tela
+/// de detalhes correspondente. Evita múltiplas leituras simultâneas com um flag.
 class QRScannerScreen extends StatefulWidget {
   const QRScannerScreen({Key? key}) : super(key: key);
 
@@ -22,6 +25,7 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
     super.dispose();
   }
 
+  /// Trata o valor lido do QR Code e tenta encontrar o equipamento.
   Future<void> _handleQRCode(String code) async {
     if (_isProcessing) return;
 

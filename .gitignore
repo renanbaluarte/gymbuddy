@@ -43,3 +43,18 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Security/Sensitive (defensive duplication of android/.gitignore)
+# Keystore and properties should NEVER be committed
+android/**/key.properties
+android/**/*.keystore
+android/**/*.jks
+android/**/local.properties
+
+# Note: Many teams keep google-services.json tracked intentionally to simplify CI/builds.
+# If you prefer to exclude it, uncomment the next line, but be aware this can break local builds.
+# android/**/google-services.json
+
+# Tests
+# Ignore the default template test file if it's not used
+test/widget_test.dart
